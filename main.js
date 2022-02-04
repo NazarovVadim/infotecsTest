@@ -22,7 +22,7 @@ const getData = async function(url){
     return await response.json();
 };
 
-let urlDb = '/data.json';
+let urlDb = './data.json';
 
 window.addEventListener('load', ()=>{
     let data;
