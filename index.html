@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>JS</title>
+</head>
+<body>
+    <form action="" id="form" onsubmit="return false;">
+        <span><input type="checkbox" name="firstName" id="firstNameCheckbox" checked> Имя  </span>
+        <span><input type="checkbox" name="lastName" id="lastNameCheckbox" checked> Фамилия </span> 
+        <span><input type="checkbox" name="about" id="aboutCheckbox" checked> Описание  </span>
+        <span><input type="checkbox" name="eyeColor" id="eyeColorCheckbox" checked> Цвет глаз </span> 
+        <span><button class="apply">Применить</button></span>
+    </form>
+    <form action="" id="colorForm" onsubmit="return false;">
+        <span><input type="checkbox" name="brown" id="brown" checked> Карий</span>
+        <span><input type="checkbox" name="blue" id="blue" checked> Голубой</span>
+        <span><input type="checkbox" name="red" id="red" checked> Красный</span>
+        <span><input type="checkbox" name="green" id="green" checked> Зеленый</span>
+        <span><button class="applyColor">Применить цвета</button></span>
+    </form>
+    <div class="editRow hide">
+        <form action="" id="editForm" onsubmit="return false;">
+            <p>Изменить строку <span class="close">X</span></p>
+            <input class="editName" type="text" placeholder="Имя">
+            <input class="editLastName" type="text" placeholder="Фамилия">
+            <input class="editAbout" type="text" placeholder="Описание">
+            <!-- <input class="editEyeColor" type="text" placeholder="Цвет глаз"> -->
+            <select name="editEyeColor" class="editEyeColor">
+                <option value="default" selected>Цвет глаз</option>
+                <option value="brown" >Карий</option>
+                <option value="blue" >Голубой</option>
+                <option value="red" >Красный</option>
+                <option value="green" >Зеленый</option>
+            </select>
+            <button class="applyEdit">Применить изменения</button>
+        </form>
+    </div>
+    <div class="wrapper">
+            <table class="table-nav">
+                <tr class="header__row">
+                    <td class="data-nav data-nav-firstName">
+                        Имя 
+                        <span class="sortName">▼</span>    <!-- ▲ -->
+                    </td>
+                    <td class="data-nav data-nav-lastName">
+                        Фамилия
+                        <span class="sortLastname">▼</span>
+                    </td>
+                    <td class="data-nav about data-nav-about">Описание</td>
+                    <td class="data-nav data-nav-eyeColor">
+                        Цвет глаз
+                    </td>
+                </tr>
+            </table>
+        <div class="r">
+            <table class="table">
+                <tr class="">
+                    
+                </tr>
+            </table>
+        </div>
+        <div class="nav"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

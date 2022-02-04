@@ -1,0 +1,151 @@
+*, body, html{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+body{
+    height: 100vh;
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+    padding: 50px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.r{
+    height: 611px;
+    overflow: hidden;
+
+}
+//таблица
+.table{
+    width: 50vw;
+    border: 1px solid black;
+    border-right: none;
+    border-spacing: 0;
+    max-height: 671px;
+    overflow: hidden;
+}
+.table-nav{
+    border-top: 1px solid black;
+    border-left: 1px solid #000;
+    border-spacing: 0;
+    width: 50vw;
+}
+.data-nav{
+    text-align: center;
+    width: 12vw;
+    height: 60px;
+    border-right: 1px solid black;
+    background: #fff;
+    z-index: 2;
+}
+//первая строка
+.header__row td{
+    line-height: 40px; //высота строки
+    //border-bottom: 1px solid #000;
+    font-weight: 700;
+    user-select: none;
+}
+//последний элемент первой строки
+.header__row:last-child{
+    border-right: none;
+}
+.hide{
+    display: none;
+}
+//ячейка
+.data{
+    text-align: center;
+    width: 12vw;
+    border-right: 1px solid black;
+    height: 60px;
+    border-bottom: 1px solid #000;
+}
+//ограничение описание троеточием
+.about p{
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    margin: 0;
+}
+//знак сортировки
+.sortName, .sortLastname{
+    cursor: pointer;
+    user-select: none;
+}
+
+
+//Навигация
+.nav{
+    margin: 50px 0;
+    width: 25vw;
+    display: flex;
+    align-items: center;justify-content: space-between;
+    user-select: none;
+}
+//form
+#form, #colorForm{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    position: absolute;
+    top: 25vh;
+    user-select: none;
+    left: 100px;
+}
+#colorForm{
+    top: 40vh;
+}
+#form span{
+    cursor: pointer;
+}
+
+#chooseColor:visited{
+    color: #000;
+}
+.apply, .applyColor, .applyEdit{
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+//editForm
+.editRow{
+    position: absolute;
+    right: 50px;
+    top: 25vh;
+}
+#editForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#editForm p{
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+    user-select: none;
+}
+#editForm input, .editEyeColor{
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 230px;
+}
+#editForm:last-child{
+    margin: 0;
+}
+.close{
+    font-weight: normal;
+    cursor: pointer;
+}
